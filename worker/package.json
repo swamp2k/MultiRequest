@@ -1,0 +1,15 @@
+{
+  "name": "council-of-llms-worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250404.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.0.0"
+  }
+}
