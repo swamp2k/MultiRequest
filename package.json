@@ -1,0 +1,18 @@
+{
+  "name": "council-of-llms",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "worker"
+  ],
+  "scripts": {
+    "dev:worker": "cd worker && wrangler dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "deploy:worker": "cd worker && wrangler deploy",
+    "deploy:frontend": "cd frontend && wrangler pages deploy dist",
+    "db:migrate:local": "wrangler d1 migrations apply council-of-llms --local",
+    "db:migrate:remote": "wrangler d1 migrations apply council-of-llms --remote"
+  }
+}

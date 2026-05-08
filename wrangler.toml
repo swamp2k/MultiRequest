@@ -1,0 +1,27 @@
+name = "council-of-llms-worker"
+main = "worker/src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "council-of-llms"
+database_id = "REPLACE_AFTER_wrangler_d1_create"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "council-uploads"
+
+[[workflows]]
+name = "consensus-workflow"
+binding = "CONSENSUS_WORKFLOW"
+class_name = "ConsensusWorkflow"
+
+[vars]
+AI_GATEWAY_ACCOUNT_ID = "your-cf-account-id"
+AI_GATEWAY_ID = "council-gateway"
+
+# Secrets — set via CLI (never commit these):
+#   wrangler secret put ENCRYPTION_KEY
+#   Value: generate with: node -e "console.log(Buffer.from(crypto.getRandomValues(new Uint8Array(32))).toString('base64'))"
