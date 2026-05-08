@@ -1,4 +1,4 @@
-name = "council-of-llms-worker"
+name = "multirequest-worker"
 main = "worker/src/index.ts"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
@@ -6,7 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "council-of-llms"
-database_id = "REPLACE_AFTER_wrangler_d1_create"
+database_id = "c2221013-fdf7-4970-8fa5-497f8680a05c"
 migrations_dir = "migrations"
 
 [[r2_buckets]]
@@ -19,7 +19,7 @@ binding = "CONSENSUS_WORKFLOW"
 class_name = "ConsensusWorkflow"
 
 [vars]
-AI_GATEWAY_ACCOUNT_ID = "your-cf-account-id"
+AI_GATEWAY_ACCOUNT_ID = "98b26d7882ddf77fcd45529f35b11202"
 AI_GATEWAY_ID = "council-gateway"
 
 # Secrets — set via CLI (never commit these):
